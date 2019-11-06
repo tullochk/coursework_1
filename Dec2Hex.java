@@ -9,14 +9,16 @@ class Dec2Hex
     {
         if (args.length > 0) 
         {
-            try 
-            {
-                Arg1 = Integer.parseInt(args[0]);
-            } 
+            while(Arg1 == null){
+              try 
+               {
+                  Arg1 = Integer.parseInt(args[0]);
+               } 
             catch (NumberFormatException e) 
             {
-                System.err.println("Argument" + args[0] + " must be an integer.");
-                System.exit(1);
+                    System.err.println("Argument" + args[0] + " must be an integer.");
+                    System.exit(1);
+                }
             }
         }
 
